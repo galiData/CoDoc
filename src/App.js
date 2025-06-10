@@ -162,7 +162,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
   const processingStages = [
     { icon: Upload, text: "Uploading admission notes", color: "text-blue-500" },
     { icon: Brain, text: "AI processing and summarization", color: "text-purple-500" },
-    { icon: Search, text: "Cross-referencing NCCN guidelines", color: "text-green-500" },
+    { icon: Search, text: "Cross-referencing Ichilov guidelines", color: "text-green-500" },
     { icon: Stethoscope, text: "Generating treatment recommendations", color: "text-red-500" }
   ];
 
@@ -323,7 +323,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
         <div className="space-y-4">
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
             <h4 className="font-semibold text-green-900 mb-2">Standard Therapy</h4>
-            <p className="text-green-800">Evidence-based treatment protocol per NCCN guidelines</p>
+            <p className="text-green-800">Evidence-based treatment protocol per Ichilov guidelines</p>
           </div>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <h4 className="font-semibold text-blue-900 mb-2">Monitoring Plan</h4>
@@ -334,7 +334,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
     }
   };
 
-  const renderNCCNAssessment = (patient) => {
+  const renderIchilovAssessment = (patient) => {
     if (patient.diagnosis.includes('Lung Cancer')) {
       return (
         <div className="space-y-4">
@@ -342,7 +342,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
             <div className="flex items-start">
               <BookOpen className="w-5 h-5 text-purple-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-purple-900 mb-2">NCCN Non-Small Cell Lung Cancer Guidelines v4.2024</h4>
+                <h4 className="font-semibold text-purple-900 mb-2">Ichilov Non-Small Cell Lung Cancer Guidelines v4.2024</h4>
                 <p className="text-purple-800 mb-3">
                   Case aligns with Category 1 recommendations for EGFR-mutated locally advanced NSCLC. 
                   Osimertinib demonstrates superior progression-free survival and overall survival compared to first-generation EGFR TKIs.
@@ -377,7 +377,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
             <div className="flex items-start">
               <BookOpen className="w-5 h-5 text-purple-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-purple-900 mb-2">NCCN Breast Cancer Guidelines v1.2024</h4>
+                <h4 className="font-semibold text-purple-900 mb-2">Ichilov Breast Cancer Guidelines v1.2024</h4>
                 <p className="text-purple-800 mb-3">
                   Triple-negative breast cancer with BRCA1 mutation qualifies for Category 1 neoadjuvant chemotherapy 
                   with platinum incorporation and consideration for PARP inhibitor therapy.
@@ -397,7 +397,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
           <div className="bg-pink-50 border border-pink-200 rounded-lg p-4">
             <h4 className="font-semibold text-pink-900 mb-2">Hereditary Cancer Risk Management</h4>
             <p className="text-pink-800 text-sm">
-              NCCN Genetic/Familial High-Risk Assessment Guidelines recommend enhanced surveillance and risk-reducing interventions for BRCA1 carriers, including consideration of prophylactic surgeries.
+              Ichilov Genetic/Familial High-Risk Assessment Guidelines recommend enhanced surveillance and risk-reducing interventions for BRCA1 carriers, including consideration of prophylactic surgeries.
             </p>
           </div>
         </div>
@@ -409,7 +409,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
             <div className="flex items-start">
               <BookOpen className="w-5 h-5 text-purple-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h4 className="font-semibold text-purple-900 mb-2">NCCN Colon Cancer Guidelines v2.2024</h4>
+                <h4 className="font-semibold text-purple-900 mb-2">Ichilov Colon Cancer Guidelines v2.2024</h4>
                 <p className="text-purple-800 mb-3">
                   KRAS wild-type metastatic colorectal cancer with liver-limited disease qualifies for Category 1 
                   anti-EGFR therapy in combination with chemotherapy backbone.
@@ -429,7 +429,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
           <div className="bg-green-50 border border-green-200 rounded-lg p-4">
             <h4 className="font-semibold text-green-900 mb-2">Conversion to Resectability</h4>
             <p className="text-green-800 text-sm">
-              Higher response rates with anti-EGFR therapy may enable hepatic resection in initially unresectable liver metastases, per NCCN Category 2A recommendations.
+              Higher response rates with anti-EGFR therapy may enable hepatic resection in initially unresectable liver metastases, per Ichilov Category 2A recommendations.
             </p>
           </div>
         </div>
@@ -442,7 +442,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
             <div>
               <h4 className="font-semibold text-purple-900 mb-2">Guideline Alignment</h4>
               <p className="text-purple-800">
-                Case reviewed against relevant NCCN guidelines. Molecular markers and staging information 
+                Case reviewed against relevant Ichilov guidelines. Molecular markers and staging information 
                 support current standard of care recommendations.
               </p>
             </div>
@@ -469,7 +469,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
             </div>
             <div className="flex items-center space-x-3 text-sm text-gray-600">
               <Activity className="w-4 h-4" />
-              <span>NCCN Guidelines v2024.1</span>
+              <span>Ichilov Guidelines v2024.1</span>
             </div>
           </div>
         </div>
@@ -587,7 +587,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
                     <div className="mt-6 text-center text-sm text-gray-600">
                       <div className="flex items-center justify-center">
                         <Search className="w-4 h-4 mr-2" />
-                        Accessing NCCN guidelines from AWS OpenSearch clusters...
+                        Accessing Ichilov guidelines from AWS OpenSearch clusters...
                       </div>
                     </div>
                   </div>
@@ -603,7 +603,7 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
                           {[
                             { id: 'summary', name: 'Clinical Summary', icon: FileText },
                             { id: 'raw', name: 'Raw Admission Notes', icon: BookOpen },
-                            { id: 'nccn', name: 'NCCN Assessment', icon: Brain },
+                            { id: 'Ichilov', name: 'Ichilov Assessment', icon: Brain },
                             { id: 'treatment', name: 'Treatment Plan', icon: Stethoscope }
                           ].map(tab => {
                             const Icon = tab.icon;
@@ -666,14 +666,14 @@ MOLECULAR: Circulating tumor DNA analysis pending. Germline testing: no BRCA mut
                           </div>
                         )}
 
-                        {/* NCCN Assessment Tab */}
-                        {activeTab === 'nccn' && (
+                        {/* Ichilov Assessment Tab */}
+                        {activeTab === 'Ichilov' && (
                           <div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                               <Brain className="w-5 h-5 mr-2 text-purple-600" />
-                              NCCN Guidelines Assessment
+                              Ichilov Guidelines Assessment
                             </h3>
-                            {renderNCCNAssessment(selectedPatient)}
+                            {renderIchilovAssessment(selectedPatient)}
                           </div>
                         )}
 
